@@ -26,7 +26,9 @@ public class ListeElectorale implements Serializable {
 		
 	}
 /** Getters et Setters ! */
-	public int getId()  {
+
+	public int getId() throws ElectionsException {
+
 		return id;
 	}
 	public void setId(int id) {
