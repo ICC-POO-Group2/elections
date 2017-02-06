@@ -25,9 +25,6 @@ public class ListeElectorale {
 	}
 /** Getters et Setters ! */
 	public int getId() throws ElectionsException {
-		if(id< 1){
-			throw new ElectionsException("ERROR: L'id ne doit pas etre inferieur à 1");
-		}
 		return id;
 	}
 	public void setId(int id) {
