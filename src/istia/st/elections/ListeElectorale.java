@@ -1,11 +1,13 @@
 package istia.st.elections;
-
+import istia.st.elections.ElectionsException;
 import java.io.*;
 /**
  * @author Viorel FLORICA
  * */
-public class ListeElectorale {
-/** Propriétées !*/
+public class ListeElectorale implements Serializable {
+	private static final long serialVersionUID = 1L;
+	
+	/** Propriétées !*/
 	private int id;
 	private String nom;
 	private int voix;
@@ -24,7 +26,9 @@ public class ListeElectorale {
 		
 	}
 /** Getters et Setters ! */
+
 	public int getId() throws ElectionsException {
+
 		return id;
 	}
 	public void setId(int id) {

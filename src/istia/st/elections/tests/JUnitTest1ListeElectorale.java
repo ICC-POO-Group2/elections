@@ -18,6 +18,8 @@ public class JUnitTest1ListeElectorale {
 		liste = new ListeElectorale(1, "a", 32000, 0, false);
 		erreur = false;
 	}
+	
+	
 	@Test
 	public void testListeElectorale() {
 		// test du constructeur
