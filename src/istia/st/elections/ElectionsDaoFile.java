@@ -7,7 +7,7 @@ public class ElectionsDaoFile implements IElectionsDao {
 	private String logFileName = null;
 	private double seuilElectoral;
 	private int nbSiegesAPourvoir;
-	private ListeElectorale[] listeElectorales =  null;
+	private ListeElectorale[] listesElectorales =  null;
 	
 	// Cosntructeurs
 	public ElectionsDaoFile(String inFileName, String outFileName, String logFileName) {
@@ -18,25 +18,22 @@ public class ElectionsDaoFile implements IElectionsDao {
 	// Getters et Setters
 	@Override
 	public double getSeuilElectoral() {
-		// TODO Auto-generated method stub
-		return 0;
+		return seuilElectoral;
 	}
 
 	@Override
 	public int getNbSiegesAPourvoir() {
-		// TODO Auto-generated method stub
-		return 0;
+		return nbSiegesAPourvoir;
 	}
 
 	@Override
 	public ListeElectorale[] getListesElectorales() {
-		// TODO Auto-generated method stub
-		return null;
+		return listesElectorales;
 	}
 
 	@Override
 	public void setListesElectorales(ListeElectorale[] listesElectorales) {
-		// TODO Auto-generated method stub
+		this.listesElectorales=listesElectorales;
 
 	}
 
