@@ -1,8 +1,9 @@
 package istia.st.elections.tests;
 
 import org.junit.Test;
-import istia.st.elections.IElectionsDao;
+
 import junit.framework.TestCase;
+import istia.st.elecitons.dao.IElectionsDao;
 import istia.st.elections.ListeElectorale;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.core.io.ClassPathResource;
