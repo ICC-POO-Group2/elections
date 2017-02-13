@@ -1,4 +1,6 @@
-package istia.st.elections;
+package istia.st.elections.metier;
+
+import istia.st.elections.ListeElectorale;
 
 public interface IElectionsMetier {
 	public ListeElectorale[] getListesElectorales();

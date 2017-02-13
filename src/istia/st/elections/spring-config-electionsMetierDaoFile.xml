@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans SYSTEM "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- la couche [dao] -->
+	<bean id="electionsDao" class="istia.st.elections.ElectionsDaoFile">
+		<constructor-arg index="0">
+			<value>data\elections-in-good.txt</value>
+		</constructor-arg>
+		<constructor-arg index="1">
+			<value>data\elections-out.txt</value>
+		</constructor-arg>
+		<constructor-arg index="2">
+			<value>data\elections-log.txt</value>
+		</constructor-arg>
+	</bean>
+	<!-- la couche [metier] -->
+	<bean id="electionsMetier" class="istia.st.elections.ElectionsMetier">
+		<property name="electionsDao">
+			<ref local="electionsDao"/>
+		</property>
+	</bean>
+
+</beans>
