@@ -14,33 +14,22 @@ public class ElectionsMetier implements IElectionsMetier {
 	
 	public ElectionsMetier() {
 		}
-	
-	
-	@Override
 	public ListeElectorale[] getListesElectorales() {
 		// demander les listes à la couche [dao]
 		return electionsDao.getListesElectorales();
 	}
-
-	@Override
 	public int getNbSiegesAPourvoir() {
 		//demander l'information à la couche dao
 		return electionsDao.getNbSiegesAPourvoir();
 	}
-
-	@Override
 	public double getSeuilElectoral() {
 		// demander l'inforamtion à la couche dao
 		return electionsDao.getSeuilElectoral();
 	}
-
-	@Override
 	public void recordResultats(ListeElectorale[] listesElectorales) {
 		// demander l'enregistrement des listes à la couche dao
 		listesElectorales = electionsDao.getListesElectorales();
 	}
-
-	@Override
 	public ListeElectorale[] calculerSieges(ListeElectorale[] listesElectorales) {
 		/** calcule les résultats de l'élection
 			@param listesElectorales ListeElectorale[] : le tableu des listes candidates

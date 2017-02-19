@@ -11,7 +11,6 @@ public class ElectionsConsole implements IElectionsUI {
 	public ElectionsConsole() {
 		
 	}
-	@Override
 	public void run() {
 		// TODO Demander les listes en compétition à la couche [metier]
 		

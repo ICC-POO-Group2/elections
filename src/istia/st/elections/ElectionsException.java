@@ -33,7 +33,7 @@ public class ElectionsException extends RuntimeException implements Serializable
 		super(message);
 		//local
 		this.code=code;
-		List<String> erreurs = new ArrayList<>();
+		List<String> erreurs = new ArrayList<String>();
 		erreurs.add(message);
 		this.erreurs= erreurs;
 	}
@@ -45,7 +45,7 @@ public class ElectionsException extends RuntimeException implements Serializable
 	private List<String> getErreursForException(Throwable th){
 		//on récupère la liste des messages d'erreur de l'exception
 		Throwable cause = th;
-		ArrayList<String> erreurs= new ArrayList<>();
+		ArrayList<String> erreurs= new ArrayList<String>();
 		while(cause != null){
 			//on récupère le message seulement s'il est !=null et non blanc
 			String message = cause.getMessage();

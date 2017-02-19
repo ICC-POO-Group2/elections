@@ -1,5 +1,9 @@
 package istia.st.elecitons.dao;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+import istia.st.elections.ElectionsException;
 import istia.st.elections.ListeElectorale;
 
 public class ElectionsDaoFile implements IElectionsDao {
@@ -12,28 +16,43 @@ public class ElectionsDaoFile implements IElectionsDao {
 	private ListeElectorale[] listesElectorales =  null;
 	
 	// Cosntructeurs
-	public ElectionsDaoFile(String inFileName, String outFileName, String logFileName) {
+	public ElectionsDaoFile(String inFileName, String outFileName, String logFileName) throws ElectionsException{
 		this.inFileName = inFileName;
 		this.outFileName = outFileName;
 		this.logFileName = logFileName;
+		this.seuilElectoral = 0;
+		this.nbSiegesAPourvoir = 0;
+	}
+	private int setNbSiegesAPourvoir(int nbSAPourvoir) {
+		int sap = 0;	
+		try{
+					sap= nbSAPourvoir;
+				}catch(InputMismatchException e){
+					System.out.println("Erreur: Le chiffres des sieges à pourvoir doit etre strictement positif");
+					System.exit(1);
+				}
+			
+		
+		return sap;
+	}
+	private double setSeuilElectoral(int seuil) {
+		
+		return 0;
 	}
 	// Getters et Setters
-	@Override
 	public double getSeuilElectoral() {
 		return seuilElectoral;
 	}
 
-	@Override
+	
 	public int getNbSiegesAPourvoir() {
 		return nbSiegesAPourvoir;
 	}
 
-	@Override
 	public ListeElectorale[] getListesElectorales() {
 		return listesElectorales;
 	}
 
-	@Override
 	public void setListesElectorales(ListeElectorale[] listesElectorales) {
 		this.listesElectorales=listesElectorales;
 
